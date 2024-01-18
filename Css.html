@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <title>Estilização de texto</title>
+        <style>
+            /*
+            Exercicio:
+                colocar o p vermelho a bold, e sublinhado
+                colocar o p verde a italico, e capitalizado
+                colocar o p azul com espaçamentos de letra e palavra
+            */
+            p {
+                text-align: center;
+                font-size: 1rem;
+                line-height: 1rem;
+            }
+            
+            .red {
+                /*color: rgb(255, 0, 0);*/
+                color: #F00;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+            
+            .green {
+                /*color: #5ad335;*/
+                color: #0F0;
+                font-style: italic;
+                text-transform: capitalize;
+            }
+
+            .blue {
+                /*color: blue;*/
+                color: #00F;
+                word-spacing: 10px;
+                letter-spacing: 4px;
+            }
+
+            .yellow {
+                color: rgb(255, 255, 0);
+                background-color: rgb(0, 0, 0);
+            }
+            .pink {
+                color: rgb(255, 0, 255);
+            }
+
+            .white {
+                background-color: #000;
+                color: #FFF;
+            }
+
+            .lightgrey {
+                color: #EEE;
+            }
+
+            .darkgrey {
+                color: #333;
+            }
+        </style>
+    </head>
+        <body>
+            <p class="red">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras commodo non leo lacinia rhoncus. Aenean sed ante laoreet, scelerisque leo eu, ullamcorper neque. In sem massa, porttitor sed suscipit sit amet, tincidunt a lacus. Donec ultrices pretium eros id ornare. Aenean accumsan vehicula ullamcorper. Vestibulum sit amet lacinia augue, et condimentum risus. Vestibulum arcu risus, tempus non iaculis eu, maximus a mi. Quisque neque nisl, ultricies sed augue eget, blandit lacinia eros.</p>
+            <p class="green">Ut quis rutrum diam, eget aliquet massa. Nulla ac gravida justo, a congue risus. Donec volutpat imperdiet velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut bibendum enim elementum cursus consequat. Vestibulum at tellus non eros finibus faucibus. Quisque viverra laoreet neque et eleifend. Sed efficitur placerat ornare. Maecenas quis malesuada magna. Mauris efficitur varius lectus vitae pulvinar. Sed interdum sit amet nulla et porttitor.</p>
+            <p class="blue">In dictum scelerisque sodales. Aliquam consequat lacus magna, quis tincidunt purus aliquet sed. Vivamus maximus sagittis nisi eu pharetra. Etiam ac massa fringilla, dapibus nulla non, facilisis tortor. Curabitur eget tellus vitae lacus gravida gravida eget vitae eros. Aenean quis cursus nibh. Morbi eros mi, mollis ut tellus sit amet, luctus interdum magna. Aliquam eleifend imperdiet purus. Mauris auctor facilisis lectus sit amet lacinia. Fusce a nisi eget tortor fermentum congue. In eu odio nec enim commodo mattis vel eget turpis. Fusce tincidunt metus in odio consequat euismod. Sed porttitor maximus quam eget posuere. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum nec nulla nec diam rhoncus tincidunt.</p>
+            <p class="yellow">In dictum scelerisque sodales. Aliquam consequat lacus magna, quis tincidunt purus aliquet sed. Vivamus maximus sagittis nisi eu pharetra. Etiam ac massa fringilla, dapibus nulla non, facilisis tortor. Curabitur eget tellus vitae lacus gravida gravida eget vitae eros. Aenean quis cursus nibh. Morbi eros mi, mollis ut tellus sit amet, luctus interdum magna. Aliquam eleifend imperdiet purus. Mauris auctor facilisis lectus sit amet lacinia. Fusce a nisi eget tortor fermentum congue. In eu odio nec enim commodo mattis vel eget turpis. Fusce tincidunt metus in odio consequat euismod. Sed porttitor maximus quam eget posuere. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum nec nulla nec diam rhoncus tincidunt.</p>
+            <p class="pink">In dictum scelerisque sodales. Aliquam consequat lacus magna, quis tincidunt purus aliquet sed. Vivamus maximus sagittis nisi eu pharetra. Etiam ac massa fringilla, dapibus nulla non, facilisis tortor. Curabitur eget tellus vitae lacus gravida gravida eget vitae eros. Aenean quis cursus nibh. Morbi eros mi, mollis ut tellus sit amet, luctus interdum magna. Aliquam eleifend imperdiet purus. Mauris auctor facilisis lectus sit amet lacinia. Fusce a nisi eget tortor fermentum congue. In eu odio nec enim commodo mattis vel eget turpis. Fusce tincidunt metus in odio consequat euismod. Sed porttitor maximus quam eget posuere. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum nec nulla nec diam rhoncus tincidunt.</p>
+            <p class="white">In dictum scelerisque sodales. Aliquam consequat lacus magna, quis tincidunt purus aliquet sed. Vivamus maximus sagittis nisi eu pharetra. Etiam ac massa fringilla, dapibus nulla non, facilisis tortor. Curabitur eget tellus vitae lacus gravida gravida eget vitae eros. Aenean quis cursus nibh. Morbi eros mi, mollis ut tellus sit amet, luctus interdum magna. Aliquam eleifend imperdiet purus. Mauris auctor facilisis lectus sit amet lacinia. Fusce a nisi eget tortor fermentum congue. In eu odio nec enim commodo mattis vel eget turpis. Fusce tincidunt metus in odio consequat euismod. Sed porttitor maximus quam eget posuere. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum nec nulla nec diam rhoncus tincidunt.</p>
+            <p class="lightgrey">In dictum scelerisque sodales. Aliquam consequat lacus magna, quis tincidunt purus aliquet sed. Vivamus maximus sagittis nisi eu pharetra. Etiam ac massa fringilla, dapibus nulla non, facilisis tortor. Curabitur eget tellus vitae lacus gravida gravida eget vitae eros. Aenean quis cursus nibh. Morbi eros mi, mollis ut tellus sit amet, luctus interdum magna. Aliquam eleifend imperdiet purus. Mauris auctor facilisis lectus sit amet lacinia. Fusce a nisi eget tortor fermentum congue. In eu odio nec enim commodo mattis vel eget turpis. Fusce tincidunt metus in odio consequat euismod. Sed porttitor maximus quam eget posuere. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum nec nulla nec diam rhoncus tincidunt.</p>
+            <p class="darkgrey">In dictum scelerisque sodales. Aliquam consequat lacus magna, quis tincidunt purus aliquet sed. Vivamus maximus sagittis nisi eu pharetra. Etiam ac massa fringilla, dapibus nulla non, facilisis tortor. Curabitur eget tellus vitae lacus gravida gravida eget vitae eros. Aenean quis cursus nibh. Morbi eros mi, mollis ut tellus sit amet, luctus interdum magna. Aliquam eleifend imperdiet purus. Mauris auctor facilisis lectus sit amet lacinia. Fusce a nisi eget tortor fermentum congue. In eu odio nec enim commodo mattis vel eget turpis. Fusce tincidunt metus in odio consequat euismod. Sed porttitor maximus quam eget posuere. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum nec nulla nec diam rhoncus tincidunt.</p>
+        </body>
+</html>
