@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <title>Técnicas para criar colunas</title>
+        <style>
+            .col1, .col2 { height: 300px; }
+            .col1 { width: 400px; outline: 1px  solid #F00; }
+            .col2 { width: 200px; outline: 1px solid #00F; }
+
+            /* #1 */
+            #Float div { float: left; }
+
+            .clear { clear:both; }
+
+            /* #2 */
+            #InlineBlock div {
+                display: inline-block;
+                vertical-align: top;
+            /* 
+                Em muitas situições de uso do inline-block, é necessário fazer este vertical-align 
+            */
+            }
+            /*  
+                Como em inline-block os espaços contam, tivemos que tirar o tamanho de um espaço de texto que é     
+                exactamente três pixeis
+            */
+            #InlineBlock .col2 { margin-left: -3px; }
+
+            /* #3 */
+            #Table { display: table; }
+            #Table .row { display: table-row }
+            #Table .row div { display: table-cell }
+            
+            /* #4 */
+            #Flex { display: Flex; }
+
+            /* #5 */
+            
+        </style>
+    </head>
+    <body>
+        <!--
+            A técnica #1 é a mais antiga para criar colunas por aplicar float: left
+            funcioonava bem, desde que a pessoa se lembra-se de aplicar um clear: both
+            imediatamente no elemento a seguir. Caso contrario, esses elementos a seguir não ficavam no sitio certo
+        -->
+        <div id="Float">
+            <div class="col1">Float 1</div>
+            <div class="col2">Float 2</div>
+        </div>
+        <div class="clear">Float 3</div>
+        <!--
+            A técnica #2 passa por criar um hibidro entre inline e block que herda de coisas de ambos, permitindo 
+            que um bloco fique ao lado de outro bloco.
+            Esta tecnica tem alguns contratempos como o espaço entre os blocos contra (3px) ou o alinhamento vertical causar prblomas de vez em quando
+        -->
+        <div id="InlineBlock">
+            <div class="col1">IB 1</div>
+            <div class="col2">IB 2</div>
+        </div>
+        <div>IB 3</div>
+        <!-- 
+            A técnica #3 não dá chatices, ela simula exactamente como tabelas
+			trabalham e se há coisa que resulta bem para montar layouts são tabelas
+        -->
+        <div id="Table">
+            <div class="row">
+                <div class="col1">Table 1</div>
+                <div class="col2">Table 2</div>
+            </div>
+            <div>Table 3</div>
+        </div>
+
+        <div id="Flex">
+            <div class="col1">Felx 1</div>
+            <div class="col2">Flex 2</div>
+        </div>
+        <div>Flex 3</div>
+    </body>
+</html>
