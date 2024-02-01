@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <title>Tranformações</title>
+        <style>
+            #box1 {
+                width:300px;
+                height: 200px;
+                background-color: #00F;
+                color: #FFF;
+                text-align: right;
+                transform: rotate(40deg) skewX(40deg) scale(1.2);
+                margin-bottom: 200px;
+            }
+
+            #box2, #box3 {
+                width:300px;
+                height: 25px;
+                padding-top: 175px;
+            }
+
+            #box2 {
+                background-color: #000;
+                color: #FFF;
+            }
+
+            #box3 {
+                background-color: #DDD;
+                transform: rotate(180deg) scaleX(-1);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box1">Algum texto</div>
+        <div id="box2">Algum texto</div>
+        <div id="box3">Algum texto</div>
+    </body>
+</html>
