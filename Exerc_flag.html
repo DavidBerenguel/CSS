@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <title>Flag</title>
+        <style>
+                        /* http://meyerweb.com/eric/tools/css/reset/ 
+            v2.0 | 20110126
+            License: none (public domain)
+            */
+
+            html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a, abbr, acronym, address, big, cite, code,
+            del, dfn, em, img, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            b, u, i, center,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, embed, 
+            figure, figcaption, footer, header, hgroup, 
+            menu, nav, output, ruby, section, summary,
+            time, mark, audio, video {
+                margin: 0;
+                padding: 0;
+                 border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+            /* HTML5 display-role reset for older browsers */
+            article, aside, details, figcaption, figure, 
+            footer, header, hgroup, menu, nav, section {
+                display: block;
+            }
+            body {
+                line-height: 1;
+            }
+            ol, ul {
+                list-style: none;
+            }
+            blockquote, q {
+                quotes: none;
+            }
+            blockquote:before, blockquote:after,
+            q:before, q:after {
+                content: '';
+                content: none;
+            }
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+
+            body {
+                font-family: verdana, sans-serif;
+                font-size: 0.67rem; /*Calcular "px" para "rem" temos de fazer 11px / 62.5%
+                                    Defenir tamanho de letra no body é uma má pratica*/
+            }
+
+            a {
+                text-decoration: none;
+                color: #FF6600;
+            }
+            
+            a:hover {
+                text-decoration: underline;
+            }
+
+            strong {
+                font-weight: bold;
+            }
+
+            em {
+                font-style: italic;
+            }
+            
+            #Wrapper {
+                width: 760px;
+                margin: 0 auto;
+            }
+            header dt, header dd {
+                display: inline;
+            }
+
+            header{
+                position: relative;
+                top: 0;
+                right: 0;
+            }
+
+            header dl, header form {
+                position: absolute;
+                right: 10px;
+            }
+
+            header dl {
+                top: 15px;
+            
+            }
+
+            header dt, header .selected {
+                font-weight: bold;
+            }
+            /*
+            header dd {
+                border-left: 1px solid #333;
+                padding-left: 4px;
+            }*/
+            
+            header dd::before {
+                content: " | ";
+                font-weight: normal;
+            }
+
+            header form {
+                top: 50px;
+            }
+
+            nav ul li{
+                display: inline;
+                margin: 0 10px;
+            }
+
+            nav {
+                background-color: #333;
+				height: 39px;
+				line-height: 39px;
+				/* height: 25px; padding-top: 14px; */
+			}
+			
+			/* nav ul {
+				display: flex;
+				height: 39px;
+				align-items: center;
+			} */
+
+            nav ul li:first-child {
+                margin-right: 190px;
+            }
+
+            nav ul li:last-child {
+                margin-right: 0;
+            }
+
+            .column-wrapper {
+                display: flex;
+                padding: 0 10px;
+                margin-top: 20px;
+            }
+
+            main {
+                width: 574px;
+                margin-right: 20px;
+            }
+            main p {
+                color: #333;
+                line-height: 0.8rem;
+            }
+
+            main h2, #Sidebar h2 {
+                background-color: rgb(240, 89, 34);
+                color: #FFF;
+                font-weight: bold;
+                text-transform: Uppercase;
+                margin-top: 20px;
+                padding: 4px;
+                width: 100%;
+            }
+
+            main table {
+                width: 100%;
+            }
+
+            main table tr {
+                border-bottom: 1px solid #eaeaea;
+            }
+
+            main table th {
+                background-color: #CCC;
+                padding: 4px;
+                    white-space: nowrap;
+
+            }
+
+            main table td {
+                text-align: center;
+                padding: 4px;
+                white-space: nowrap;
+            }
+
+            main table tr :first-child {
+                text-align: left;
+            }
+
+            #Sidebar {
+                width: 186px;
+            }
+            
+            #Sidebar ul {
+                border: 1px solid #CCC;
+                padding: 4px;
+                width: 100%;
+            }
+
+            #Sidebar ul li {
+                background-color: #333;
+                margin-bottom: 2px;
+                padding: 4px;
+                background-image: url('Exercicio flag/seta.gif');
+                background-repeat: no-repeat;
+                background-position: 4px center;
+                margin-bottom: 2px;
+            }
+
+            #Sidebar ul li:last-child {
+                margin-bottom: unset;
+            }
+
+            #Sidebar ul li:hover {
+                background-color: #666;
+            }
+
+            #Sidebar ul li a {
+                text-decoration: none;
+                color: #FFF;
+                display: block;
+                padding-left: 20px;
+            }
+
+            #Sidebar h2 + div, #Sidebar h2 + ol {
+                padding: 6px;
+            }
+
+            #sidebar ol li {
+                line-height: 1rem;
+                color: #333;
+            }
+
+            #Sidebar h2 + div a:hover {
+                color: #F93;
+            }
+
+        </style>
+    </head> 
+    <body>
+        <div id="Wrapper">
+            <header>
+                <h1>
+                    <a href="/">
+                        <img src="Exercicio flag/1.png" alt="">
+                    </a>
+                </h1>
+                <dl>
+                    <dt>Rede de Centros de Formação</dt>
+                    <dd class="selected"><a href="/rededecentros/lisboa">Lisboa</a></dd>
+                    <dd><a href="/rededecentros/coimbra">Coimbra</a></dd>
+                    <dd><a href="/rededecentros/porto">Porto</a></dd>
+                </dl>
+                <form method="get" action="/search.php">
+                    <div>
+                        <label>
+                            <img src="Exercicio flag/pesquisa.png" alt="Pesquisa">
+                            <input type="search" name="search">
+                        </label>
+                        <button type="submit">Ok</button>
+                    </div>  
+                </form>
+                <nav>
+                    <ul>
+                        <li><a href="/">home</a></li>
+                        <li><a href="">quem somos</a></li>
+                        <li><a href="">FLAGProfessional</a></li>
+                        <li><a href="">calendário de formação</a></li>
+                        <li><a href="/recrutamento">recrutamento</a></li>
+                        <li><a href="/contactos">contactos</a></li>
+                    </ul>
+                </nav>
+                <div><img src="Exercicio flag/4.png" alt="Academia Flag de Design de comunicação... "></div>
+            </header>
+            <div class="column-wrapper">
+                <main>
+                    <p>A <strong>Formação FLAG</strong> é especializada em tecnologias associadas ao desenvolvimento de artes/suportes visuais e interativos, nas vertentes <em>print</em>, <em>web</em> e <em>motion</em>, sendo os <strong>Centros de Formação FLAG</strong>, particularmente, reconhecidos nas áreas de <a href="http://www.flag.pt/pages/area.asp?id=1">Design Gráfico</a>, <a href="http://www.flag.pt/pages/area.asp?id=3">Web Design</a>, <a href="http://www.flag.pt/pages/area.asp?id=3">Programação Web</a>, <a href="">Web Marketing</a>, <a href="">Desenvolvimento de Aplicações Mobile</a>, <a href="">Desenho e Animação 3D</a>, <a href="">Vídeo e Multimédia</a>, bem como no desenho assistido por computador (<a href="">CAD</a>).
+                    </p>
+                    <h2>Curso em Destaque | FLAG Lisboa</h2>
+                    <table>
+                        <thead>
+                            <tr>    
+                                <th>Curso</th>
+                                <th>Desconto</th>
+                                <th>Início</th>
+                                <th>Fim</th>
+                                <th>Horário</th>
+                            </tr> 
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="http://flag.pt/pages/curso.asp?id=1&idcurso=52">Adobe Illustrator - Avançado</a></td> 	
+                                <td>20%</td>
+                                <td>04/03</td>
+                                <td>15/03</td>
+                                <td class="horario">[2ª, 4ª, 6ª N]</td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://flag.pt/pages/curso.asp?id=7&idcurso=139">LinkedIn for Business</a></td>
+                                <td>15%</td> 
+                                <td>07/03</td> 
+                                <td>14/03</td> 	
+                                <td class="horario">[3ª, 5ª N]</td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://flag.pt/pages/curso.asp?id=2&idcurso=17">ArchiCAD</a></td> 	
+                                <td>10%</td> 
+                                <td>11/03</td> 
+                                <td>22/03</td> 	
+                                <td class="horario">[2ª a 6ª T]</td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://flag.pt/pages/curso.asp?id=2&idcurso=17">PhoneGap</a></td> 	
+                                <td>15%</td> 	
+                                <td>11/03</td> 	
+                                <td>18/03</td> 	
+                                <td class="horario">[2ª, 4ª, 6ª N]</td>
+                            </tr>
+                            <tr>
+                                <td>Adobe Premiere Pro</td> 	
+                                <td>10%</td> 	
+                                <td>11/03</td> 	
+                                <td>09/03</td> 	
+                                <td class="horario">[2ª a 6ª T]</td>
+                            </tr>
+                            <tr>
+                                <td>Especializado Desenvolvimento de Aplicações para iPhone/iPad</td> 	
+                                <td>15%</td> 	
+                                <td>13/03</td> 	
+                                <td>12/04</td> 	
+                                <td class="horario">[2ª a 6ª T]</td>
+                            </tr>
+                            <tr>
+                                <td>FLAGProfessional Web & Mobile Developer</td>
+                                <td>275€</td> 	
+                                <td>13/03</td> 	
+                                <td>09/12</td> 	
+                                <td class="horario">[2ª, 4ª, 6ª M]</td>
+                            </tr>
+                            <tr>
+                                <td>Javascript</td>
+                                <td>15%</td> 	
+                                <td>15/03</td> 	
+                                <td>29/03</td> 	
+                                <td class="horario">[2ª, 4ª, 6ª T]</td>
+                            </tr>
+                            <tr>
+                                <td>Especializado Desenvolvimento de Aplicações para Android</td>
+                                <td>15%</td>
+                                <td>15/03</td> 	
+                                <td>08/05</td> 	
+                                <td class="horario">[2ª, 4ª, 6ª N]</td>
+                            </tr>
+                            <tr>
+                                <td>Adobe Illustrator</td>
+                                <td>10%</td> 	
+                                <td>16/03</td> 	
+                                <td>06/04</td> 	
+                                <td class="horario">[S]</td>
+                            </tr>
+                            <tr>
+                                <td>FLAGProfessional Web Marketeer</td>
+                                <td>275€</td> 	
+                                <td>20/03</td> 	
+                                <td>10/2013</td>
+                                <td class="horario">[2ª, 4ª, 6ª N]</td>
+                            </tr>
+                            <tr>
+                                <td>Especializado Web Design</td>
+                                <td></td>
+                                <td>20/03</td>
+                                <td>17/05</td> 	
+                                <td class="horario">[2ª, 4ª, 6ª N]</td>
+                            </tr>
+                            <tr>
+                                <td>Cinema 4D</td>
+                                <td>10%</td> 	
+                                <td>20/03</td> 	
+                                <td>05/04</td> 	
+                                <td class="horario">[2ª a 6ª T]</td>
+                            </tr>    
+                            <tr>
+                                <td>Especializado Search Engine Marketing</td>
+                                <td></td>
+                                <td>21/03</td> 	
+                                <td>18/06</td> 	
+                                <td class="horario">[3ª, 5ª N]</td>
+                            </tr>
+                            <tr>
+                                <td>Especializado Revit</td>	
+                                <td>10%</td> 	
+                                <td>25/03</td> 	
+                                <td>24/04</td> 	
+                                <td class="horario">[2ª a 6ª T]</td>
+                            </tr>
+                            <tr>
+                                <td>Autodesk Revit</td>
+                                <td>10%</td> 	
+                                <td>25/03</td> 	
+                                <td>08/04</td> 	
+                                <td class="horario">[2ª a 6ª T]</td>
+                            </tr>
+                            <tr>
+                                <td>Facebook Marketing</td>
+                                <td></td>
+                                <td>25/03</td> 	
+                                <td>08/04</td> 	
+                                <td class="horario">[2ª, 4ª, 6ª N]</td>
+                            </tr>
+                            <tr>
+                                <td>Adobe After Effects</td>
+                                <td></td>
+                                <td>25/03</td> 	
+                                <td>02/04</td> 	
+                                <td class="horario">[2ª a 6ª T]</td>
+                            </tr>
+                            <tr>
+                                <td>Adobe InDesign - Digital Publishing Suite e EPUB</td>
+                                <td></td>
+                                <td>26/03</td> 	
+                                <td>05/04</td> 	
+                                <td class="horario">[2ª a 6ª T]</td>
+                            </tr>
+                            <tr>
+                                <td>Especializado Design Gráfico</td>
+                                <td>10%</td>
+                                <td>26/03</td>
+                                <td>09/07</td>
+                                <td class="horario">[3ª, 5ª N]</td>
+                            </tr>
+                            <tr>
+                                <td>Especializado Web Programmer</td>
+                                <td></td>
+                                <td>27/03</td>
+                                <td>29/07</td>
+                                <td class="horario">[2ª, 4ª, 6ª M]</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </main>
+                <div id="Sidebar">
+                    <ul>
+                        <li><a href="">Design Gráfico</li></li>
+                        <li><a href="">Fotografia</a></li>
+                        <li><a href="">Web & Mobile</a></li>
+                        <li><a href="">Web Marketing</a></li>
+                        <li><a href="">Vídeo e Motion Design</a></li>
+                        <li><a href="">Desenho e Animação 3D</a></li>
+                        <li><a href="">CAD</a></li>
+                        <li><a href="">Sistemas</a></li>
+                    </ul>
+                    <h2>Empresas</h2>
+                    <div class="nome">
+                        <a href=""> Peça já o catálgo FLAG</a>
+                    </div>
+                    <h2>Horários</h2>
+                    <ol class="">
+                        <li>[M] Manhã (09h30 - 12h30)</li>
+                        <li>[T] Tarde (14h30 - 17h30)</li>
+                        <li>[N] Noite (18h30 - 21h30)</li>
+                        <li>[S] Sábado (10h00 - 17h00)</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
